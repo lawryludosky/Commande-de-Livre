@@ -1,0 +1,187 @@
+/*******************
+
+GENERAL
+
+*******************/
+
+* {
+	box-sizing:border-box;
+}
+
+html,
+body {
+	height:100%;
+	width:100%;
+	margin:0;
+	overflow-x:hidden;
+	padding-bottom:20px;
+}
+
+body {
+	background-color: white;
+	color:#323332;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+/*******************
+
+MAIN
+
+*******************/
+
+main {
+	max-width:800px;
+	max-height:500px;	
+	padding:15px;
+	border-radius:2px;
+	width:100%;
+	margin:0;
+}
+
+main h2 {
+	margin-top:0;
+	text-align:center;
+	color:#184C19;
+}
+
+/*******************
+
+MAIN : MAGASIN
+
+*******************/
+
+#magasin {
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+}
+
+#magasin h2 {
+	width:100%;
+}
+
+#magasin button {
+	width:100%;
+	border:none;
+	border-radius:5px;
+	background-color:white;
+	border:1px solid #7FC181;
+	margin:5px;
+	transition:background-color 0.5s;
+}
+
+#magasin button:hover, #magasin button:active {
+	background-color:#EDF7ED;
+	cursor:pointer;
+}
+
+/*******************
+
+MAIN : LIVRE
+
+*******************/
+
+#livre {
+	display:none;
+}
+
+#livre li{
+	list-style-type:none;
+	border-bottom:1px dashed #BFBFBF;
+	margin:20px 10px;
+	padding-bottom:15px;
+}
+
+#livre p {
+	margin:5px 0;
+}
+
+#livre li p:nth-child(2) {
+	font-weight:bold;
+	font-style:italic;
+}
+
+#livre button {
+	float:right;
+	border:none;
+	background-color:transparent;
+	color:#184C19;
+	font-weight:bold;
+}
+
+#error {
+	color:red;
+	display:none;
+}
+
+/*******************
+
+MAIN : RECAP
+
+*******************/
+
+#recap {
+	display:none;
+}
+
+#recap>p {
+	text-align:right;
+	font-style:italic;
+	font-weight: bold;
+}
+
+#recap li{
+	list-style-type: none;
+	margin-bottom:15px;
+	border-bottom:1px dashed #BFBFBF;
+	padding:10px 0;
+}
+
+#recap li::before{
+	content:">";
+	color:#184C19;
+	margin-right:10px;
+}
+
+#recap li span {
+	float: right;
+}
+
+/*******************
+
+RESPONSIVE
+
+*******************/
+
+@media screen and (min-width:550px) {
+	
+	#magasin button {
+		width:48%;
+	}
+}
+
+@media screen and (min-width:770px) {
+	
+	body {
+		background-color: #DBFFDC;
+	}
+
+	main {
+		background-color:white;
+	}
+
+	#magasin button {
+		width:31%;
+	}
+
+	#livre li{
+		display:inline-block;
+		width:47%;
+		vertical-align:top;
+		border:none;
+	}
+}
+
+
